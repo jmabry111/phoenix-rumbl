@@ -1,6 +1,8 @@
 defmodule Rumbl.VideoControllerTest do
   use Rumbl.ConnCase
   alias Rumbl.Video
+  @valid_attrs %{url: "http://youtu.be", title: "vid", description: "a vid"}
+  @invalid_attrs %{title: "invalid"}
 
 setup %{conn: conn} = config do
   if username = config[:login_as] do
