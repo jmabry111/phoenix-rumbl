@@ -5,7 +5,8 @@ defmodule Rumbl.UserSocket do
   channel "videos:*", Rumbl.VideoChannel
 
   ## Transports
-  transport :websocket, Phoenix.Transports.WebSocket
+  transport :websocket, Phoenix.Transports.WebSocket,
+    timeout: 45_000
   # transport :longpoll, Phoenix.Transports.LongPoll
 
   @max_age 2 * 7 * 24 * 60 * 60
