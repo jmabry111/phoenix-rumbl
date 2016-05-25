@@ -11,6 +11,7 @@
 # and so on) as they will fail if something goes wrong.
 alias Rumbl.Repo
 alias Rumbl.Category
+alias Rumbl.User
 
 for category <- ~w(Action Drama Romance Comedy Sci-fi Musical) do
   Repo.get_by(Category, name: category) ||
